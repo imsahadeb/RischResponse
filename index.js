@@ -20,7 +20,7 @@ const {
    
   // Intent in Dialogflow called `Goodbye`
   app.intent('Goodbye', conv => {
-    conv.close('See you later!')
+    conv.close('See you later!, Bye')
   })
    
   app.intent('Default Fallback Intent', conv => {

@@ -1,4 +1,5 @@
 const express = require('express')
+const fromApi = require('./functions');
 const bodyParser = require('body-parser')
 const {
     dialogflow,
@@ -12,17 +13,12 @@ const {
   // Register handlers for Dialogflow intents
    
   app.intent('Default Welcome Intent', conv => {
-    // conv.ask('Hi, how is it going?\nhhh hhhhhghgh jjjh\n')
-    // conv.ask(`Here's a picture of a cat`)
-    // conv.ask(new Image({
-    //   url: 'https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/imgs/160204193356-01-cat-500.jpg',
-    //   alt: 'A cat',
-    // }))
- 
-    for(i=0;i<2;i++){
-      conv.ask(i);
-    }
-    
+    url='https://api.railwayapi.com/v2/between/source/ncb/dest/bhp/date/01-06-2018/apikey/ye1rpmx0tk/'
+    fromApi.callTheRailwayApi(url,(response)=>{
+      let getJsonRsponse=JSON.parse(response);
+      trainName =getJsonRsponse.trains[0].name;
+      return conv.ask(trainName);
+    })
    
   })
    

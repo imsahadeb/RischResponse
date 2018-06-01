@@ -16,6 +16,7 @@ const {
     url='https://api.railwayapi.com/v2/between/source/ncb/dest/bhp/date/01-06-2018/apikey/ye1rpmx0tk/'
     fromApi.callTheRailwayApi(url,(response)=>{
       let getJsonRsponse=JSON.parse(response);
+      console.log(getJsonRsponse);
       trainName =getJsonRsponse.trains[0].name;
       return conv.ask(trainName);
     })

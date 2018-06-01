@@ -18,6 +18,8 @@ const {
       url: 'https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/imgs/160204193356-01-cat-500.jpg',
       alt: 'A cat',
     }))
+    conv.ask('Hello')
+    conv.ask('How are you')
   })
    
   // Intent in Dialogflow called `Goodbye`

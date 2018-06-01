@@ -1,3 +1,5 @@
+const express = require('express')
+const bodyParser = require('body-parser')
 const {
     dialogflow,
     Image,
@@ -26,3 +28,5 @@ const {
   app.intent('Default Fallback Intent', conv => {
     conv.ask(`I didn't understand. Can you tell me something else?`)
   })
+
+  express().use(bodyParser.json(), app).listen(80)

@@ -19,8 +19,13 @@ const {
     //   alt: 'A cat',
     // }))
  
-    var text ='hello sahadeb'
-    conv.ask(text);
+    function hello(){
+      var result ='hello'
+      return result;
+    }
+
+    hello();
+    conv.ask(hello());
     
    
   })

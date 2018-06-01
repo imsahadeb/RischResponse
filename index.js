@@ -19,13 +19,9 @@ const {
     //   alt: 'A cat',
     // }))
  
-    function hello(){
-      var result ='hello'
-      return result;
+    for(i=0;i<2;i++){
+      conv.ask(i);
     }
-
-    hello();
-    conv.ask(hello());
     
    
   })

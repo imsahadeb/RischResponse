@@ -29,4 +29,4 @@ const {
     conv.ask(`I didn't understand. Can you tell me something else?`)
   })
 
-  express().use(bodyParser.json(), app).listen(80)
+  express().use(bodyParser.json(), app).listen(process.env.PORT || 80)

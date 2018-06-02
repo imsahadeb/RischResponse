@@ -22,10 +22,10 @@ const {
         trainName =getJsonRsponse.trains[0].name;
         
       })
-      pass(conv.ask(trainName));
+     
     }
   
-   
+    pass(conv.ask(trainName));
    
   })
    
